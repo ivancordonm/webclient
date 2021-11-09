@@ -1,7 +1,7 @@
-package com.example.webclient.controller;
+package com.example.quote.infrastructure.rest.in;
 
-import com.example.webclient.client.QuoteWebClient;
-import com.example.webclient.domain.Quote;
+import com.example.quote.application.ObtainQuote;
+import com.example.quote.domain.Quote;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,12 +13,11 @@ import reactor.core.publisher.Mono;
 @RequestMapping("/quotes")
 public class QuoteController {
 
-    private final QuoteWebClient quoteWebClient;
+    private final ObtainQuote quoteService;
 
     @GetMapping(value = "/random")
     public Mono<Quote> random() {
-        return quoteWebClient.getRandomQuote();
+        return quoteService.getRandomQuote();
     }
-
 
 }

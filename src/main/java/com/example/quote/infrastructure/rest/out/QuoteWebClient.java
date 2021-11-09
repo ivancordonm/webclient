@@ -1,6 +1,7 @@
-package com.example.webclient.client;
+package com.example.quote.infrastructure.rest.out;
 
-import com.example.webclient.domain.Quote;
+import com.example.quote.domain.Quote;
+import com.example.quote.domain.QuoteClient;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
@@ -8,7 +9,7 @@ import reactor.core.publisher.Mono;
 
 @Service
 @RequiredArgsConstructor
-public class QuoteWebClient {
+public class QuoteWebClient implements QuoteClient {
 
     private final WebClient webClient;
 

@@ -1,4 +1,4 @@
-package com.example.webclient.config;
+package com.example.quote.infrastructure.config;
 
 import io.netty.channel.ChannelOption;
 import io.netty.handler.timeout.ReadTimeoutHandler;
